@@ -156,7 +156,7 @@ function Box({ children }) {
   return (
     <div className="box">
       <button className="btn-toggle" onClick={() => setIsOpen((open) => !open)}>
-        {isOpen ? "–" : "+"}
+        {isOpen ? "-" : "+"}
       </button>
       {isOpen && <>{children}</>}
     </div>
@@ -242,7 +242,7 @@ function MovieDetails({ selectedId, handleClose, handleAddMovie, watched }) {
     if (!title) return;
     document.title = `Movie | ${title}`;
     return () => {
-      document.title = "usePopcorn";
+      document.title = "OMDb";
     };
   }, [title]);
 
