@@ -184,7 +184,6 @@ function MovieDetails({ selectedId, handleClose, handleAddMovie, watched }) {
   const [loading, setLoading] = useState(false);
   const [userRating, setUserRating] = useState("");
   const isWatched = watched.map((movie) => movie.imdbID).includes(selectedId);
-  console.log(isWatched);
   const watchedUserRating = watched.find(
     (movie) => movie.imdbID === selectedId
   )?.userRating;
@@ -302,6 +301,7 @@ function MovieDetails({ selectedId, handleClose, handleAddMovie, watched }) {
 }
 
 const KEY = "41b950a8";
+
 export default function App() {
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState(null);
